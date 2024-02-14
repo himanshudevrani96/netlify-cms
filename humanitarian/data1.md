@@ -5,5 +5,4 @@ description: "Testing CMS "
 humaitarian_images:
   - image: /images/humanitarian.svg
   - image: /images/humanitarian.svg
-  - image: /images/humanitarian.svg
 ---
