@@ -15,7 +15,7 @@ import humanitarianList from "../../humanitarian.json";
 export const HumanitarianActicity = () => {
   return (
     <ContentBox style={{ marginBottom: "50px" }}>
-      {humanitarianList?.map((item, index) => {
+      {humanitarianList?.map((item:any) => {
         return (
           <SubContent>
             <DateBox>{item?.date}</DateBox>
