@@ -26,7 +26,7 @@ export const HumanitarianActicity = () => {
               <H3>{item?.title}</H3>
               <H1>{item?.description}</H1>
               <ImageWrapper>
-                {item?.humaitarian_images.map((items) => {
+                {item?.humaitarian_images.map((items: any) => {
                   return (
                     <Image src={items?.image || demo} alt="demo" />
                   );
