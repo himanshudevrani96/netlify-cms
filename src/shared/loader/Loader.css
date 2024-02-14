@@ -1,0 +1,12 @@
+/* BlurScreen.css */
+
+/* Apply blur effect to the entire screen */
+body.blur {
+    overflow: hidden; /* Prevent scrolling when blurred */
+  }
+  
+  body.blur > * {
+    filter: blur(2px); /* Adjust the blur intensity as needed */
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the blur effect */
+  }
+  

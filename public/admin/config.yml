@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "staking" # Used in routes, e.g., /admin/collections/blog
+    label: "Staking Tier" # Used in the UI
+    folder: "staking" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Locked Period", name: "locked_period", widget: "string" }
+      - { label: "Reward Rate ", name: "reward_rate", widget: "string" }
+      - {
+          label: "Early Exit Reward Fee",
+          name: "early_exit_reward_fee",
+          widget: "string",
+        }
+      - { label: "Early Exit Fee", name: "early_exit_fee", widget: "string" }
+
+  - name: "humanitarian" # Used in routes, e.g., /admin/collections/blog
+    label: "Humanitarial Tier" # Used in the UI
+    folder: "humanitarian" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Humanitarian Images",
+          name: "humaitarian_images",
+          widget: "list",
+          fields:
+            [{ label: "Humanitarian Images", name: "image", widget: "image" }],
+        }
