@@ -1,0 +1,86 @@
+export const WHITELIST: any = {
+  address: process.env.NEXT_PUBLIC_WHITE_LIST_ADDRESS,
+  abi: [
+    {
+      inputs: [
+        { internalType: "address", name: "_donationWallet", type: "address" },
+        { internalType: "uint256", name: "_minDonationAmount", type: "uint256" },
+        { internalType: "address", name: "_tokenAddress", type: "address" },
+        { internalType: "address", name: "_authorizerWallet", type: "address" },
+      ],
+      stateMutability: "nonpayable",
+      type: "constructor",
+    },
+    { anonymous: false, inputs: [{ indexed: false, internalType: "address", name: "authorizerWallet", type: "address" }], name: "AuthorizerWallet", type: "event" },
+    {
+      anonymous: false,
+      inputs: [
+        { indexed: true, internalType: "address", name: "user", type: "address" },
+        { indexed: false, internalType: "uint256", name: "amount", type: "uint256" },
+      ],
+      name: "Donation",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        { indexed: true, internalType: "address", name: "previousOwner", type: "address" },
+        { indexed: true, internalType: "address", name: "newOwner", type: "address" },
+      ],
+      name: "OwnershipTransferred",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        { indexed: false, internalType: "address", name: "admin", type: "address" },
+        { indexed: false, internalType: "uint256", name: "amount", type: "uint256" },
+      ],
+      name: "SetDonationAmount",
+      type: "event",
+    },
+    {
+      anonymous: false,
+      inputs: [
+        { indexed: false, internalType: "address", name: "admin", type: "address" },
+        { indexed: false, internalType: "address", name: "donationWallet", type: "address" },
+      ],
+      name: "SetDonationWallet",
+      type: "event",
+    },
+    { inputs: [], name: "authorizerWallet", outputs: [{ internalType: "address", name: "", type: "address" }], stateMutability: "view", type: "function" },
+    { inputs: [{ internalType: "uint256", name: "_amount", type: "uint256" }], name: "donate", outputs: [], stateMutability: "nonpayable", type: "function" },
+    {
+      inputs: [{ internalType: "address", name: "", type: "address" }],
+      name: "donation",
+      outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+      stateMutability: "view",
+      type: "function",
+    },
+    { inputs: [], name: "donationWallet", outputs: [{ internalType: "address", name: "", type: "address" }], stateMutability: "view", type: "function" },
+    {
+      inputs: [{ internalType: "address", name: "_user", type: "address" }],
+      name: "hasDonated",
+      outputs: [{ internalType: "bool", name: "", type: "bool" }],
+      stateMutability: "view",
+      type: "function",
+    },
+    { inputs: [], name: "kaldiToken", outputs: [{ internalType: "contract IERC20", name: "", type: "address" }], stateMutability: "view", type: "function" },
+    { inputs: [], name: "minDonationAmount", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
+    {
+      inputs: [{ internalType: "uint256", name: "_uint", type: "uint256" }],
+      name: "multiplePerUint",
+      outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+      stateMutability: "view",
+      type: "function",
+    },
+    { inputs: [], name: "owner", outputs: [{ internalType: "address", name: "", type: "address" }], stateMutability: "view", type: "function" },
+    { inputs: [], name: "renounceOwnership", outputs: [], stateMutability: "nonpayable", type: "function" },
+    { inputs: [{ internalType: "address", name: "_authorizerWalletAddress", type: "address" }], name: "setAuthorizerWallet", outputs: [], stateMutability: "nonpayable", type: "function" },
+    { inputs: [{ internalType: "address", name: "_donationWallet", type: "address" }], name: "setDonationWallet", outputs: [], stateMutability: "nonpayable", type: "function" },
+    { inputs: [{ internalType: "uint256", name: "_minDonationAmount", type: "uint256" }], name: "setMindonationAmount", outputs: [], stateMutability: "nonpayable", type: "function" },
+    { inputs: [], name: "totalDonation", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
+    { inputs: [], name: "totalUniqueUser", outputs: [{ internalType: "uint256", name: "", type: "uint256" }], stateMutability: "view", type: "function" },
+    { inputs: [{ internalType: "address", name: "newOwner", type: "address" }], name: "transferOwnership", outputs: [], stateMutability: "nonpayable", type: "function" },
+  ],
+};

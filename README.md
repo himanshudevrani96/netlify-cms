@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+## Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- <a href="" target="_blank" rel="noopener noreferrer"><img src="./public/assets/svg/test/logo.jpg" alt="Coverage" /></a> -->
 
-Currently, two official plugins are available:
+# WinWin
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+WinWin is a DeFi savings account on the Pulsechain protocol that allows users to compound yield savings and win crypto prizes. WinWin will give everyone a fair chance of regularly winning prizes without risking their own tokens, all while generating an APY that compounds automatically.
 
-## Expanding the ESLint configuration
+The user can access the application via web-browser, and he must have the supported crypto wallet installed. This interface, built with Next.js, relies on the Wagmi and Ethers.js library to communicate with the smart contracts through any supported crypto wallet. This means that the data reflected on the front-end application is fetched from the Pulse Chain blockchain. Each action performed by the user (Staking, Buying, investing in pools) creates a transaction on Pulse Chain, which will require connected wallet confirmation and pay a small fee, and this transaction will permanently modify the state of the blockchain.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<!-- <img src="./public/assets/svg/landing_ss.png"> -->
 
-- Configure the top-level `parserOptions` property like this:
+## System Requirements
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    # Node.js 16.8 or later.
+    # MacOS, Windows (including WSL), and Linux are supported.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Prerequisites
+
+    # Download the Node js and setup your environment
+
+    # Check your node version
+    $ node -v
+
+    # Check package manager version
+    $ yarn -v (or) npm -v
+
+## Quick Start
+
+    # Clone the application
+    $ git clone -b dev https://gitlab.rapidinnovation.tech/root/web-next-landing-winwin.git
+    # Install dependencies
+    $ yarn install (or) npm install
+
+    # Serve on localhost:3000
+    $ yarn run dev (or) npm run dev
